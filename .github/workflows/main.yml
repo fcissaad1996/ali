@@ -1,0 +1,10 @@
+on: push
+jobs:
+  Explore:
+   runs-on: ubuntu-latest
+   steps:
+     - run: echo "the job even triggering by ${{github.event_name}}"
+     - run: echo "the job even triggering by ${{runner.os}}"
+     - run: echo "the job even triggering by ${{github.ref}}"
+     - uses: actions/checkout@v4
+     - run: echo "the job even triggering by ${{github.workspace}}"
